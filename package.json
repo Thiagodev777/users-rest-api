@@ -1,0 +1,23 @@
+{
+  "name": "users-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/shared/http/server.ts",
+    "build": "rimraf dist && npx tsc"
+  },
+  "keywords": [],
+  "author": "Antonio Thiago",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.2.5",
+    "husky": "^8.0.3",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "rimraf": "^5.0.1"
+  }
+}
