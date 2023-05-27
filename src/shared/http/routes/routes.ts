@@ -2,7 +2,7 @@ import { Router } from 'express'
 const routes = Router()
 
 routes.get('/', (req, res) => {
-  res.json({ msg: 'Olá Devs!!' })
+  res.send('Olá Devs!!')
 })
 
 export { routes }
