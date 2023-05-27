@@ -1,6 +1,7 @@
 import express from 'express'
 import 'express-async-errors'
 import cors from 'cors'
+import 'dotenv/config'
 
 const app = express()
 
@@ -12,4 +13,6 @@ app.get('/', (req, res) => {
   return res.json({ msg: 'Olá Devs' })
 })
 
-app.listen(8089, () => console.log(`Server started on port ${8089} ⭐`))
+app.listen(process.env.PORT, () =>
+  console.log(`Server started on port ${process.env.PORT} ⭐`),
+)
