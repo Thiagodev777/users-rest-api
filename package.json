@@ -4,15 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/shared/http/server.ts",
-    "build": "rimraf dist && npx tsc"
+    "build": "rimraf dist && npx tsc",
+    "lint": "npx eslint .",
+    "lint:fix": "npx eslint . --fix",
+    "start:dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules src/shared/http/server.ts"
   },
   "keywords": [],
   "author": "Antonio Thiago",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.2.5",
-    "husky": "^8.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "git-commit-msg-linter": "^5.0.4",
+    "prettier": "^2.7.1",
     "ts-node-dev": "^2.0.0",
     "tsconfig-paths": "^4.2.0",
     "typescript": "^5.0.4"
