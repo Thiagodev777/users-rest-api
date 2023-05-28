@@ -15,6 +15,10 @@ export class RolesRepository {
     return this.roles
   }
 
+  findByName(name: string): Role | undefined {
+    return this.roles.find(role => role.name === name)
+  }
+
   create({ name }: CreateRoleDTO): Role {
     const role = new Role()
     Object.assign(role, { name: name, created_at: new Date() })
