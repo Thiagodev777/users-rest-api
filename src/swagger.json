@@ -1,0 +1,12 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "users-rest-api Documentation",
+    "description": "Documentation for users-rest-api",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Antonio Thiago",
+      "email": "noplex.dev@gmail.com"
+    }
+  }
+}
