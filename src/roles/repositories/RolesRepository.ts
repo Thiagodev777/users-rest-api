@@ -1,10 +1,11 @@
 import { Role } from '@roles/entities/Role'
+import { IRolesRepository } from './RolesRepository.interface'
 
-interface CreateRoleDTO {
+export interface CreateRoleDTO {
   name: string
 }
 
-export class RolesRepository {
+export class RolesRepository implements IRolesRepository {
   private roles: Role[]
   private static INSTANCE: RolesRepository
 
