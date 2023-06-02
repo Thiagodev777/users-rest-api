@@ -8,5 +8,46 @@
       "name": "Antonio Thiago",
       "email": "noplex.dev@gmail.com"
     }
+  },
+  "paths": {
+    "/roles": {
+      "post": {
+        "tags": ["Role"],
+        "summary": "create new Role",
+        "description": "create a new Role",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Role created"
+          },
+          "400": {
+            "description": "Role already exists"
+          }
+        }
+      },
+      "get": {
+        "tags": ["Role"],
+        "summary": "List all Roles",
+        "description": "Returns all Roles paginated",
+        "responses": {
+          "200": {
+            "description": "sucess"
+          }
+        }
+      }
+    }
   }
 }
