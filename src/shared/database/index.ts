@@ -1,5 +1,6 @@
 import 'dotenv/config'
 import { DataSource } from 'typeorm'
+import { CreateRolesTable1685715783861 } from './migrations/1685715783861-CreateRolesTable'
 
 const AppDataSource = new DataSource({
   type: process.env.DEV_DB_TYPE as any,
@@ -9,7 +10,7 @@ const AppDataSource = new DataSource({
   password: process.env.DEV_DB_PASSWORD,
   database: process.env.DEV_DB_DATABASE,
   entities: [],
-  migrations: [],
+  migrations: [CreateRolesTable1685715783861],
 })
 
 export { AppDataSource }
